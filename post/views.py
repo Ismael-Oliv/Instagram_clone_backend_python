@@ -23,7 +23,7 @@ def get_post_controller(request, *args, **kwargs):
         posts = PostSerializer(posts_query, many=True)
         return Response(status=200, data=posts)
 
-    return  Response(status=404)
+    return Response(status=404)
 
 
 @api_view(["POST"])
