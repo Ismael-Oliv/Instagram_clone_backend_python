@@ -7,6 +7,6 @@ class Comments(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user_id = models.ForeignKey("user.User", on_delete=models.CASCADE)
     post_id = models.ForeignKey("post.Post", on_delete=models.CASCADE)
-    comments = models.TextField(max_length=300)
+    content = models.TextField(max_length=300)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
